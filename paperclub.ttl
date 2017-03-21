@@ -1,0 +1,14 @@
+# Paper Club Ontology
+
+@prefix pc: <http://purl.org/petapico/o/paperclub#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+
+# hasRead Property
+#
+# This property denotes that somebody has read a given work (e.g. a paper):
+
+pc:hasRead rdf:type rdf:Property .
