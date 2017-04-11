@@ -187,3 +187,17 @@ npx:hasSignature rdfs:domain npx:NanopubSignatureElement .
 npx:signedBy rdf:type rdf:Property .
 npx:signedBy rdfs:domain npx:NanopubSignatureElement .
 npx:signedBy rdfs:range foaf:Agent .
+
+
+# Retractions and Updates
+# -----------------------
+
+npx:retracts rdf:type rdf:Property .
+npx:retracts rdfs:domain foaf:Agent .
+npx:retracts rdfs:range np:Nanopublication .
+
+npx:supersedes rdf:type rdf:Property .
+npx:supersedes rdf:type owl:IrreflexiveObjectProperty .
+npx:supersedes rdfs:domain np:Nanopublication .
+npx:supersedes rdfs:range np:Nanopublication .
+
