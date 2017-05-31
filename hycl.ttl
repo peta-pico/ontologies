@@ -70,3 +70,26 @@ hycl:hasUnrelatedMeaning rdfs:range hycl:Statement .
 hycl:isImprovedVersionOf rdfs:subPropertyOf hycl:hasSameMeaning .
 hycl:isImprovedVersionOf rdfs:domain hycl:Statement .
 hycl:isImprovedVersionOf rdfs:range hycl:Statement .
+
+
+# Relations between Works/People and Statements
+# ---------------------------------------------
+
+hycl:claims rdf:type rdf:Property .
+hycl:claims rdfs:range hycl:Statement .
+
+hycl:discusses rdf:type rdf:Property .
+hycl:discusses rdfs:range hycl:Statement .
+
+hycl:hypothesizes rdf:type rdf:Property .
+hycl:hypothesizes rdfs:range hycl:Statement .
+
+hycl:investigates rdf:type rdf:Property .
+hycl:investigates rdfs:range hycl:Statement .
+
+hycl:refutes rdf:type rdf:Property .
+hycl:refutes rdfs:range hycl:Statement .
+
+hycl:reviews rdf:type rdf:Property .
+hycl:reviews rdfs:range hycl:Statement .
+
