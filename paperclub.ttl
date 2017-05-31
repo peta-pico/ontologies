@@ -1,4 +1,5 @@
 # Paper Club Ontology
+# ===================
 
 @prefix pc: <http://purl.org/petapico/o/paperclub#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
