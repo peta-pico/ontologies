@@ -1,1 +1,1 @@
-This repo will be used for ontology candidates.
+A repository with ontology candidates.
