@@ -111,12 +111,18 @@ npx:commands rdfs:range npx:Bot .
 # Signatures
 # ----------
 
+
 npx:NanopubSignatureElement rdf:type rdfs:Class .
 
-npx:hasSignatureElement rdf:type rdf:Property .
-npx:hasSignatureElement rdf:type owl:InverseFunctionalProperty .
-npx:hasSignatureElement rdfs:domain np:Nanopublication .
-npx:hasSignatureElement rdfs:range npx:NanopubSignatureElement .
+npx:hasSignatureTarget rdf:type rdf:Property .
+npx:hasSignatureTarget rdf:type owl:FunctionalProperty .
+npx:hasSignatureTarget rdfs:domain npx:NanopubSignatureElement .
+npx:hasSignatureTarget rdfs:range np:Nanopublication .
+
+npx:hasAlgorithm rdf:type owl:DatatypeProperty .
+npx:hasAlgorithm rdf:type owl:FunctionalProperty .
+npx:hasAlgorithm rdfs:domain npx:NanopubSignatureElement .
+npx:hasAlgorithm rdfs:range xsd:string .
 
 npx:hasPublicKey rdf:type owl:DatatypeProperty .
 npx:hasPublicKey rdf:type owl:FunctionalProperty .
@@ -130,6 +136,13 @@ npx:hasSignature rdfs:domain npx:NanopubSignatureElement .
 npx:signedBy rdf:type rdf:Property .
 npx:signedBy rdfs:domain npx:NanopubSignatureElement .
 npx:signedBy rdfs:range foaf:Agent .
+
+# npx:hasSignatureElement is deprecated and only used for legacy signatures.
+# New signatures use npx:hasSignatureTarget instead.
+npx:hasSignatureElement rdf:type rdf:Property .
+npx:hasSignatureElement rdf:type owl:InverseFunctionalProperty .
+npx:hasSignatureElement rdfs:domain np:Nanopublication .
+npx:hasSignatureElement rdfs:range npx:NanopubSignatureElement .
 
 
 # Retractions and Updates
