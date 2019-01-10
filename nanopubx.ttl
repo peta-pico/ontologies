@@ -111,23 +111,24 @@ npx:commands rdfs:range npx:Bot .
 # Signatures
 # ----------
 
+npx:CryptoElement rdf:type rdfs:Class .
 
-npx:NanopubSignatureElement rdf:type rdfs:Class .
+npx:hasAlgorithm rdf:type owl:DatatypeProperty .
+npx:hasAlgorithm rdf:type owl:FunctionalProperty .
+npx:hasAlgorithm rdfs:domain npx:CryptoElement .
+npx:hasAlgorithm rdfs:range xsd:string .
+
+npx:hasPublicKey rdf:type owl:DatatypeProperty .
+npx:hasPublicKey rdf:type owl:FunctionalProperty .
+npx:hasPublicKey rdfs:domain npx:CryptoElement .
+npx:hasPublicKey rdfs:range xsd:string .
+
+npx:NanopubSignatureElement rdfs:subClassOf npx:CryptoElement .
 
 npx:hasSignatureTarget rdf:type rdf:Property .
 npx:hasSignatureTarget rdf:type owl:FunctionalProperty .
 npx:hasSignatureTarget rdfs:domain npx:NanopubSignatureElement .
 npx:hasSignatureTarget rdfs:range np:Nanopublication .
-
-npx:hasAlgorithm rdf:type owl:DatatypeProperty .
-npx:hasAlgorithm rdf:type owl:FunctionalProperty .
-npx:hasAlgorithm rdfs:domain npx:NanopubSignatureElement .
-npx:hasAlgorithm rdfs:range xsd:string .
-
-npx:hasPublicKey rdf:type owl:DatatypeProperty .
-npx:hasPublicKey rdf:type owl:FunctionalProperty .
-npx:hasPublicKey rdfs:domain npx:NanopubSignatureElement .
-npx:hasPublicKey rdfs:range xsd:string .
 
 npx:hasSignature rdf:type owl:DatatypeProperty .
 npx:hasSignature rdf:type owl:FunctionalProperty .
@@ -143,6 +144,12 @@ npx:hasSignatureElement rdf:type rdf:Property .
 npx:hasSignatureElement rdf:type owl:InverseFunctionalProperty .
 npx:hasSignatureElement rdfs:domain np:Nanopublication .
 npx:hasSignatureElement rdfs:range npx:NanopubSignatureElement .
+
+npx:KeyDeclaration rdfs:subClassOf npx:CryptoElement .
+
+npx:declaredBy rdf:type rdf:Property .
+npx:declaredBy rdfs:domain npx:KeyDeclaration .
+npx:declaredBy rdfs:range foaf:Agent .
 
 
 # Retractions and Updates
