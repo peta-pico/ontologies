@@ -159,6 +159,8 @@ npx:retracts rdf:type rdf:Property .
 npx:retracts rdfs:domain foaf:Agent .
 npx:retracts rdfs:range np:Nanopublication .
 
+npx:RetractionNanopub rdfs:subClassOf np:Nanopublication .
+
 npx:supersedes rdf:type rdf:Property .
 npx:supersedes rdf:type owl:IrreflexiveObjectProperty .
 npx:supersedes rdfs:domain np:Nanopublication .
