@@ -1,0 +1,9 @@
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+<null> a prov:Entity;
+	 dc:title "Nanopub-X: Experimental Extensions of the Nanopublication Model";
+	 prov:wasAttributedTo <http://www.tkuhn.org/>;
+	 dc:creator <http://www.tkuhn.org/>;
+	 prov:wasAttributedTo <https://github.com/dgarijo/Widoco/>,<http://www.essepuntato.it/lode/>;
+.
