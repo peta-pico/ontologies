@@ -1,6 +1,0 @@
-digraph ar2dtool_diagram { 
-rankdir=LR;
-size="1501"
-	"prov:Agent" -> "prov:Entity" [ label = "pc:hasRead" ];
-
-}
