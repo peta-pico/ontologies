@@ -85,17 +85,24 @@ npx:opinionOn rdfs:domain npx:Opinion .
 npx:opinionOn rdfs:range npx:Statement .
 
 
-# Introductions
-# -------------
+# Introductions and Descriptions
+# ------------------------------
 #
 # Introduction nanopubs are meta-nanopublications introducing a new object or
 # agent.
 
 npx:IntroNanopub rdfs:subClassOf np:Nanopublication .
 
-npx:introduces rdf:type owl:FunctionalProperty .
+npx:introduces rdf:type rdf:Property .
 npx:introduces rdfs:domain npx:IntroNanopub .
 npx:introduces rdfs:range owl:Thing .
+
+# Descriptions are like introductions but refer to something that has already
+# been defined/introduced (typically by somebody else):
+
+npx:describes rdf:type rdf:Property .
+npx:describes rdfs:domain np:Nanopublication .
+npx:describes rdfs:range owl:Thing .
 
 
 # Bots
