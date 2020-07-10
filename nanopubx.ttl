@@ -15,19 +15,21 @@
 @prefix hycl: <http://purl.org/petapico/o/hycl#> .
 
 
-# Example Nanopubs
-# ----------------
+# Nanopub Types
+# -------------
 #
 # Example nanopubs are created and published for testing. Their content should
 # not be taken seriously.
 
 npx:ExampleNanopub rdfs:subClassOf np:Nanopublication .
 
-
-# Meta-Nanopublications
-# ---------------------
+# Meta-nanopublications are nanopoublications about other nanopublications:
 
 npx:MetaNanopub rdfs:subClassOf np:Nanopublication .
+
+# Protected nanopublications are not supposed to be shared publicly:
+
+npx:ProtectedNanopub rdfs:subClassOf np:Nanopublication .
 
 
 # Indexes
