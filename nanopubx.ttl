@@ -175,3 +175,15 @@ npx:supersedes rdf:type owl:IrreflexiveObjectProperty .
 npx:supersedes rdfs:domain np:Nanopublication .
 npx:supersedes rdfs:range np:Nanopublication .
 
+
+# Approvals and Disapprovals
+# --------------------------
+
+npx:approves-of rdf:type rdf:Property .
+npx:approves-of rdfs:domain foaf:Agent .
+npx:approves-of rdfs:range np:Nanopublication .
+
+npx:disapproves-of rdf:type rdf:Property .
+npx:disapproves-of rdfs:domain foaf:Agent .
+npx:disapproves-of rdfs:range np:Nanopublication .
+
