@@ -199,3 +199,8 @@ npx:qualifies rdf:type rdf:Property .
 npx:qualifies rdfs:domain foaf:Agent .
 npx:qualifies rdfs:range np:Nanopublication .
 
+# Services
+# --------
+
+npx:NanopubService rdf:type rdfs:Class .
+
