@@ -187,6 +187,7 @@ npx:disapproves-of rdf:type rdf:Property .
 npx:disapproves-of rdfs:domain foaf:Agent .
 npx:disapproves-of rdfs:range np:Nanopublication .
 
+
 # Certification
 # -------------
 
@@ -199,8 +200,39 @@ npx:qualifies rdf:type rdf:Property .
 npx:qualifies rdfs:domain foaf:Agent .
 npx:qualifies rdfs:range np:Nanopublication .
 
+
 # Services
 # --------
 
 npx:NanopubService rdf:type rdfs:Class .
+
+
+# Settings
+# --------
+
+npx:NanopubSetting rdf:type rdfs:Class .
+
+npx:hasAgents rdf:type rdf:Property .
+npx:hasAgents rdfs:domain npx:NanopubSetting .
+npx:hasAgents rdfs:range npx:NanopubIndex .
+
+npx:hasServices rdf:type rdf:Property .
+npx:hasServices rdfs:domain npx:NanopubSetting .
+npx:hasServices rdfs:range npx:NanopubIndex .
+
+npx:TrustRangeAlgorithm rdf:type rdfs:Class .
+
+npx:hasTrustRangeAlgorithm rdf:type rdf:Property .
+npx:hasTrustRangeAlgorithm rdfs:domain npx:NanopubSetting .
+npx:hasTrustRangeAlgorithm rdfs:range npx:TrustRangeAlgorithm .
+
+npx:SettingUpdateStrategy rdf:type rdfs:Class .
+
+npx:hasUpdateStrategy rdf:type rdf:Property .
+npx:hasUpdateStrategy rdfs:domain npx:NanopubSetting .
+npx:hasUpdateStrategy rdfs:range npx:SettingUpdateStrategy .
+
+npx:hasBootstrapService rdf:type rdf:Property .
+npx:hasBootstrapService rdfs:domain npx:NanopubSetting .
+npx:hasBootstrapService rdfs:range npx:NanopubService .
 
