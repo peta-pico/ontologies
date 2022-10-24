@@ -240,3 +240,9 @@ npx:hasBootstrapService rdf:type rdf:Property .
 npx:hasBootstrapService rdfs:domain npx:NanopubSetting .
 npx:hasBootstrapService rdfs:range npx:NanopubService .
 
+npx:FixedTrust rdf:type npx:TrustRangeAlgorithm .
+npx:TransitiveTrust rdf:type npx:TrustRangeAlgorithm .
+
+npx:ManualUpdatesOnly rdf:type npx:SettingUpdateStrategy .
+npx:UpdatesByCreator rdf:type npx:SettingUpdateStrategy .
+
