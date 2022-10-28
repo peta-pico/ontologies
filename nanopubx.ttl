@@ -192,8 +192,8 @@ npx:disapprovesOf rdfs:domain foaf:Agent .
 npx:disapprovesOf rdfs:range np:Nanopublication .
 
 
-# Certification
-# -------------
+# Certifications etc.
+# -------------------
 
 npx:certifies rdf:type rdf:Property .
 npx:certifies rdfs:domain foaf:Agent .
@@ -203,6 +203,9 @@ npx:certifies rdfs:range np:Nanopublication .
 npx:qualifies rdf:type rdf:Property .
 npx:qualifies rdfs:domain foaf:Agent .
 npx:qualifies rdfs:range np:Nanopublication .
+
+npx:signsDocument rdf:type rdf:Property .
+npx:signsDocument rdfs:domain foaf:Agent .
 
 
 # Services
