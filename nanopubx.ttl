@@ -23,6 +23,10 @@
 
 npx:ExampleNanopub rdfs:subClassOf np:Nanopublication .
 
+# Draft nanopubs are marked as work-in-progress:
+
+npx:DraftNanopub rdfs:subClassOf np:Nanopublication .
+
 # Meta-nanopublications are nanopoublications about other nanopublications:
 
 npx:MetaNanopub rdfs:subClassOf np:Nanopublication .
@@ -91,7 +95,7 @@ npx:opinionOn rdfs:range npx:Statement .
 # ------------------------------
 #
 # Introduction nanopubs are meta-nanopublications introducing a new object or
-# agent.
+# agent. The ID is kept upon updating of the nanopublication.
 
 npx:IntroNanopub rdfs:subClassOf np:Nanopublication .
 
@@ -105,6 +109,13 @@ npx:introduces rdfs:range owl:Thing .
 npx:describes rdf:type rdf:Property .
 npx:describes rdfs:domain np:Nanopublication .
 npx:describes rdfs:range owl:Thing .
+
+# Embeddings are like introductions, but new IDs are minted upon each updating
+# of the respective nanopublication:
+
+npx:embeds rdf:type rdf:Property .
+npx:embeds rdfs:domain np:Nanopublication .
+npx:embeds rdfs:range owl:Thing .
 
 
 # Bots
@@ -165,6 +176,18 @@ npx:declaredBy rdfs:domain npx:KeyDeclaration .
 npx:declaredBy rdfs:range foaf:Agent .
 
 
+# General Publication Info
+# ------------------------
+
+npx:wasCreatedAt rdf:type rdf:Property .
+npx:wasCreatedAt rdfs:domain np:Nanopublication .
+npx:wasCreatedAt rdfs:range np:NanopubService .
+
+npx:hasNanopubType rdf:type rdf:Property .
+npx:hasNanopubType rdf:type owl:ObjectProperty .
+npx:hasNanopubType rdfs:domain np:Nanopublication .
+
+
 # Retractions and Updates
 # -----------------------
 
@@ -178,6 +201,15 @@ npx:supersedes rdf:type rdf:Property .
 npx:supersedes rdf:type owl:IrreflexiveObjectProperty .
 npx:supersedes rdfs:domain np:Nanopublication .
 npx:supersedes rdfs:range np:Nanopublication .
+
+npx:invalidates rdf:type rdf:Property .
+npx:invalidates rdf:type owl:IrreflexiveObjectProperty .
+npx:invalidates rdfs:domain np:Nanopublication .
+npx:invalidates rdfs:range np:Nanopublication .
+
+npx:hasOriginalVersion rdf:type rdf:Property .
+npx:hasOriginalVersion rdfs:domain np:Nanopublication .
+npx:hasOriginalVersion rdfs:range np:Nanopublication .
 
 
 # Approvals and Disapprovals
