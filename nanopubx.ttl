@@ -1,8 +1,7 @@
-# Nanopub-X: Experimental Extensions of the Nanopublication Model
-# ===============================================================
+# Nanopub-X: Extensions of the Nanopublication Model
+# ==================================================
 #
-# This model defines unofficial experimental extensions to the standard
-# nanopublication schema. These definitions may change.
+# This model defines extensions to the nanopublication schema.
 
 @prefix npx: <http://purl.org/nanopub/x/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -11,6 +10,7 @@
 @prefix rdfg: <http://www.w3.org/2004/03/trix/rdfg-1/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix np: <http://www.nanopub.org/nschema#> .
 @prefix hycl: <http://purl.org/petapico/o/hycl#> .
 
@@ -118,10 +118,18 @@ npx:embeds rdfs:domain np:Nanopublication .
 npx:embeds rdfs:range owl:Thing .
 
 
-# Bots
-# ----
+# Software Agents
+# ---------------
 
-npx:Bot rdfs:subClassOf foaf:Agent .
+npx:SoftwareAgent rdfs:subClassOf foaf:Agent .
+npx:SoftwareAgent rdfs:subClassOf prov:Agent .
+
+npx:SoftwareTool rdfs:subClassOf npx:SoftwareAgent .
+npx:Bot rdfs:subClassOf npx:SoftwareAgent .
+
+npx:wasCreatedWith rdf:type rdf:Property .
+npx:wasCreatedWith rdfs:subPropertyOf prov:wasAttributedTo .
+npx:wasCreatedWith rdfs:range npx:SoftwareTool .
 
 npx:commands rdf:type rdf:Property .
 npx:commands rdfs:domain foaf:Agent .
